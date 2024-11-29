@@ -1,0 +1,51 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap');
+body {
+    background-color: #db9e58;
+}
+
+h1{
+    text-align: center;
+}
+
+form {
+    width: 80%;
+    margin: 0 500px; /* 1. по вертикали 2. по горизонтали */
+    max-width: 300px;
+    padding: 20px; /* Организуем отступы со всех 4х сторон*/
+    border: 2px solid #0f0402;
+    border-radius: 5px;
+
+    /*Настройка тени:
+    1. По оси Х  положительное значение - вправо, отрицательное влево
+    2. По оси У  положительное значение вниз,  отрицательное вверх
+    3. Размытие тени
+    4. Цвет тени
+    */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="phone"],
+    input[type="password"]{
+        width: 100;
+        border: 1px solid #db3517;
+        border-radius: 5px;
+        padding: 5px 0 5px 5px; /* начинаем сверху и идём по часовой стрелке*/
+
+    }
+
+    button {
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        padding: 10px, 20px, 10px, 20px ;
+        
+    }
+    .reset{
+        background-color: #f44336;
+    }
+    .submit{
+        background-color: #54f653;
+    }

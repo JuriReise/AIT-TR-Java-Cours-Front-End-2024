@@ -1,0 +1,18 @@
+.grid-container {
+    /* сделал grid контейнер */
+    display: grid;
+    /* пространство между контейнерами */
+    gap: 5px;
+    /* 1fr равен одному 'кусочку', если в схеме их несколько фреймы равны между собой */
+    grid-template-columns: 1fr 2fr 1fr;
+    /* grid-template-columns: 100px 200px 150px; */
+    /* задаем высоту каждого ряда */
+    grid-auto-rows: 60px;
+  }
+  
+  .grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgreen;
+  }

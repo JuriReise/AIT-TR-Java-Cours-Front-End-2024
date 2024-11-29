@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <style>
+      h1 {
+        text-align: center;
+      }
+    </style> -->
+    <!-- 
+    ./ - нужно остаться в той же папке
+    ../ - нужно выйти во внешнюю папку
+    -->
+    <link rel="stylesheet" href="../Classwork_04/style.css">
+    <title>Form</title>
+  </head>
+  <!-- 
+  Где будет задаваться стилистика
+  1. Inline - styles линейная стилистика задаётся в той же строке, где находится сам элемент
+  2. Отдельный ТЭГ style
+  С помощью чего будет задаваться стилистика
+  С помощью чего будут выбираться элементы для настройки
+  1. с помощью имени ТЭГа
+  2. Отдельный файл (.CSS).
+  -->
+  <body>
+    <h1>Signup Form</h1>
+    <form>
+      <!-- Дефолтный блочный элемент - DIV-->
+      <!-- Дефолтный строчный элемент - span-->
+      <div>
+        <!-- NAME -->
+        <label for="name"> Name: </label>
+        <input
+          id="name"
+          type="text"
+          placeholder="Enter your Name..."
+          required
+        />
+      </div>
+
+      <br />
+
+      <div>
+        <!-- EMAIL -->
+        <label for="email"> Email: </label>
+        <input
+          id="email"
+          type="email"
+          placeholder="Enter your Email..."
+          required
+        />
+      </div>
+      
+      <br />
+
+      <!-- Телефон -->
+
+      <div>
+        <!-- Phone -->
+        <label for="phone"> Phone: </label>
+        <input
+          id="phone"
+          title="Example: +123-456-7890" 
+          type="phone" 
+          placeholder="Example: +123-456-7890"
+          pattern="\+[0-9]{3}-[0-9]{3}-[0-9]{4}"
+          required
+        />
+      </div>
+      <br />
+
+      <div>
+        <!-- PASS -->
+        <label for="password"> Password: </label>
+        <input
+          id="password"
+          type="password"
+          placeholder="Enter your password..."
+          minlength="8"
+          required
+        />
+      </div>
+
+      <br />
+      <div>
+        <!-- HOBBY -->
+        <label for="hobby"> Hobby: </label>
+        <select id="hobby" required>
+          <option value="">Choose your hobby!</option>
+          <option value="Football">
+            Football - best sport from all over the world!
+          </option>
+          <option value="Chess">
+            Chess - best sport from all over the world!
+          </option>
+        </select>
+      </div>
+
+      <br />
+
+      <div>
+        <!-- I agree -->
+        <label for="agree"> I agree: </label>
+        <input
+          id="agree"
+          type="checkbox"
+          required />
+      </div>
+
+      <br />
+
+      <div>
+        <!-- Gender -->
+        <label for="male">Male:</label>
+          <input id="male" type="radio" name="gender" value="male"
+         required  />
+  
+          <label for="female">Female:</label>
+          <input id="female" type="radio" name="gender" value="female"
+          required />
+        </div>
+  
+        <br />
+        <div>
+      <button class="reset" type="reset" > Reset! </button>
+      <button class="submit" type="finish" > Finish! </button>
+      </div>
+    </form>
+  </body>
+</html>

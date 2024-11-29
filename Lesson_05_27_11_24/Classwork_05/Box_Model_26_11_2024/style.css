@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: rgb(221, 205, 205);
+  font-family: "Raleway", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.haeder {
+  height: 400px;
+  background-image: url("https://images.ua.prom.st/3095163516_w640_h2048_ankara_truck_starts_us_to__tional_turkish_coffee.jpg?fresh=1&PIMAGE_ID=3095163516");
+  background-size: cover;
+  background-position: center; /* background-repeat: no-repeat; */
+}
+h1 {
+  font-family: "Covered By Your Grace", serif;
+  font-weight: 400;
+  font-size: 100;
+  font-style: normal;
+  text-align: center;
+  color: rgba(221, 221, 221, 45);
+  padding-top: 120px;
+}
+h2 {
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+p {
+  text-align: center;
+  color: rgb(56, 27, 3);
+}
+.main {
+  position: relative;
+}
+.left,
+.right {
+  position: absolute;
+  width: 48%;
+  top: 15px;
+}
+.left{
+    left: 15px;
+}
+.right{
+    right: 15px;
+}

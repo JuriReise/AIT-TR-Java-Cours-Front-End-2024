@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body style="background-image: url('https://images.unsplash.com/photo-1732276514159-f5e4d25a17eb?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); background-size: cover; background-repeat: no-repeat;">
+
+  </body>
+    <h1>Добро пожаловать на обычный немецкий сайт</h1>
+    <form>
+        <!-- Базовые данные -->
+      <!-- Поля "Имя" и "Фамилия" в одной строке -->
+      <div>
+        <label for="first-name">Имя:</label>
+        <input id="first-name" type="text" placeholder="Введите имя..." required />
+
+        <label for="last-name">Фамилия:</label>
+        <input id="last-name" type="text" placeholder="Введите фамилию..." required />
+      </div>
+
+      <br />
+
+      <!-- "Год рождения" -->
+      <div>
+        <label for="birth-year">Год рождения:</label>
+        <select id="birth-year" required > 
+            <option value=""> Выберите год...</option>
+
+        </select>
+        
+        <!-- "Семейное положение" -->
+        <label for="marital-status">Семейное положение:</label>
+        <select id="marital-status" required>
+          <option value="">Выберите...</option>
+          <option value="single">Холост</option>
+          <option value="married">Женат/Замужем</option>
+          <option value="divorced">Разведён</option>
+        </select>
+      </div>
+
+        <script>
+            const select = document.getElementById("birth-year"); // находим элемент
+
+            for (let year = 1900; year <= 2023; year++) {
+                const option = document.createElement("option"); // Создаём <option>
+                option.value = year;
+                option.textContent = year;
+                select.appendChild(option);                
+            }
+        </script>
+                
+
+      <br />
+
+      <!-- Адресные данные  -->
+      <!-- Поля "Страна" и "Индекс" в одной строке -->
+      <div>
+        <label for="country">Country</label>
+        <input id="country" type="text" placeholder="Введите страну..." required />
+
+        <label for="zip">ZIP:</label>
+        <input id="zip" type="text" placeholder="Введите индекс..." required />
+      </div>
+
+      <br />
+
+      <!-- Поля "Улица" и "Город" в одной строке -->
+      <div>
+        <label for="street">Street:</label>
+        <input id="street" type="text" placeholder="Введите улицу..." required />
+
+        <label for="city">City:</label>
+        <input id="city" type="text" placeholder="Введите город..." required />
+        </div>
+
+        <br />
+
+      <!-- Поля "Номер дома" и "Штат/земля" в одной строке -->
+      <div>
+        <label for="house">House:</label>
+        <input id="house" type="text" placeholder="Введите номер дома..." required />
+
+        <label for="state">State:</label>
+        <input id="state" type="text" placeholder="Введите штат или землю..." required />
+
+    </div>
+
+        <br />
+      
+
+      <!-- Контакты -->
+      <div>
+        <label for="email">Email:</label>
+        <input id="email" type="text" placeholder="Введите Email..." required />
+
+        <label for="telephone">Телефон:</label>
+        <input id="telephone" type="text" placeholder="Введите номер телефона..." required />
+
+      </div>
+
+       <br />
+       <!-- финиш -->
+       <button>Finish</button>
+
+
+
+    </form>
+    
+</body>
+</html>

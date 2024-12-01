@@ -1,0 +1,15 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('./img/luuk-wouters-2rxgWHb.jpg'); 
+    background-size: cover; /* Масштабирование фона */
+    background-position: center; /* Центрирование фона */
+    background-repeat: no-repeat; /* Отключить повторение */
+    background-attachment: fixed; /* Фиксированный фон при прокрутке */
+    color: white; /* Цвет текста для контраста */
+}

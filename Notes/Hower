@@ -1,0 +1,10 @@
+/* стили с псевдоклассом hover применятся к элементу при наведении на него мышкой */
+.lesson-link:hover {
+  text-decoration: underline;
+  color: coral;
+}
+
+.homework-link:hover {
+  text-decoration: underline;
+  color: forestgreen;
+}

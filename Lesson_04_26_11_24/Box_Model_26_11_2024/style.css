@@ -1,0 +1,27 @@
+body{
+    background-image: url('https://images.ua.prom.st/3095163516_w640_h2048_ankara_truck_starts_us_to__tional_turkish_coffee.jpg?fresh=1&PIMAGE_ID=3095163516'); 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    
+  
+}
+h1{
+text-align: center;
+color: rgb(221, 221, 221);
+
+}
+h2{
+    text-align: center;
+    color: rgb(142, 103, 235);  
+    font-size: 3cap;  
+}
+p{
+    color: rgb(230, 198, 18);
+    text-shadow: 5px       
+}
+
+
+
+
+
+

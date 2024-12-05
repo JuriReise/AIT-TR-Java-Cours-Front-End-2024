@@ -1,0 +1,79 @@
+/* Основные стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('./img/luuk-wouters-2rxgWHb.jpg'); 
+    background-size: cover; /* Масштабирование фона */
+    background-position: center; /* Центрирование фона */
+    background-repeat: no-repeat; /* Отключить повторение */
+    background-attachment: fixed; /* Фиксированный фон при прокрутке */
+    color: white; /* Цвет текста для контраста */
+}
+/* header */
+header {
+    /* vw - viewport width - ширина видимой области браузера */
+    /* width: 80vw; */
+    /* 'приклеиваем' элемент на страницу с помощью position sticky  */
+    position: sticky;
+    /* не забываем добавить значение в пикселях для одной из координат чтобы sticky сработал ( top / left / right / bottom ) */
+    top: 0px;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+/* Галерея */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* Карточка */
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.4);
+    border: 2px solid #020000;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    text-align: center;
+}
+img {
+    width: 300px; /* Ширина изображения */
+    height: 200px; /* Высота изображения */
+    object-fit: cover; /* Сохранить пропорции, обрезая лишнее */
+    border-radius: 5px; /* (опционально) закруглённые углы */
+    display: block; /* Убирает отступы вокруг изображений */
+}
+
+
+/* Название карточки */
+.card h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #ece8e7;
+}
+
+/* Изображение */
+.card img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+/* Описание */
+.card p {
+    font-size: 1rem;
+    color: #e6dddd;
+    line-height: 1.8;
+}

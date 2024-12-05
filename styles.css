@@ -67,3 +67,10 @@ ul {
 li {
     margin: 10px 0;
 }
+
+/* Background styling */
+
+body {
+    background: url('./i.jpeg') no-repeat center center fixed;
+    background-size: cover;
+}

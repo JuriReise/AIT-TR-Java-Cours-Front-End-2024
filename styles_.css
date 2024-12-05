@@ -11,7 +11,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-    padding: 100px;
+    padding: 20px;
 }
 .card {
     display: flex;
@@ -73,57 +73,4 @@ li {
 body {
     background: url('./img/i.jpeg') no-repeat center center fixed;
     background-size: cover;
-}
-
-/* Header, GitHub button, and footer styles */
-
-.gradient-header {
-    background: linear-gradient(to right, #8B0000, #FFD700); /* Червонное золото */
-    color: white;
-    text-align: center;
-    padding: 10px; /* Уменьшенная высота */
-    font-size: 0.8rem;
-    position: fixed;
-    width: 100%;
-    top: 0 auto;
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-}
-
-.gradient-header h1 {
-    font-family: 'Arial', sans-serif;
-    font-weight: bold;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-    background: linear-gradient(to bottom, #FFD700, #B8860B); /* Червонное золото */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.github-button {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-    border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.github-button:hover {
-    background-color: #555;
-    transform: scale(1.05);
-}
-
-footer {
-    background-color: rgba(0, 0, 0, 0.3);
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    font-size: 0.9rem;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.9);
 }

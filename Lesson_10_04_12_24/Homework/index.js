@@ -13,15 +13,14 @@ clonedBtn.className = "second-btn";
 btn.addEventListener("click", () => {
   // добавляем к body склонированную кнопку
   document.body.append(clonedBtn);
-  console.log("первый слушатель!");
+  // console.log("первый слушатель!");
 });
 
 // здесь можете создать EventListener для второй кнопки
-
 clonedBtn.addEventListener("click", () => {
   btn.style.backgroundColor = "#9c4a1a";
   btn.style.color = "black";
-  console.log("второй слушатель!!");
+  // console.log("второй слушатель!!");
 });
 
-console.log("основной блок кода!");
+// console.log("основной блок кода!");

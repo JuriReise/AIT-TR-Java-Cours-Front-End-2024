@@ -1,129 +1,202 @@
-/* Градиент для чердака */
-.gradient-header {
-    background: linear-gradient(to right, #4e342e, #d7ccc8); /* Градиент черно-молочного шоколада */
-    color: white;
-    text-align: center;
-    padding: 20px;
-    font-size: 2rem;
-}
-/* Галерея карточек */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 100px;
-}
-.card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.6);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 15px;
-    text-align: center;
-    color: white;
-    transition: transform 0.2s, box-shadow 0.2s;
-    cursor: pointer;
-}
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-.card img {
-    width: 250px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 5px;
-    margin-bottom: 15px;
-}
-.back-button {
-    display: inline-block;
-    margin: 20px auto;
-    padding: 10px 20px;
-    text-decoration: none;
-    background: #d7ccc8; /* Молочный шоколад */
-    color: black;
-    border-radius: 5px;
-    font-size: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    transition: background 0.3s, color 0.3s;
-}
-.back-button:hover {
-    background: #4e342e; /* Тёмный шоколад */
-    color: white;
-}
 
-/* Additional styles from optimization */
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-}
-ul {
-    list-style: none;
-    padding: 0;
-}
-li {
-    margin: 10px 0;
-}
-
-/* Background styling */
-
-body {
-    background: url('./img/i.jpeg') no-repeat center center fixed;
-    background-size: cover;
-}
-
-/* Header, GitHub button, and footer styles */
-
-.gradient-header {
-    background: linear-gradient(to right, #8B0000, #FFD700); /* Червонное золото */
-    color: white;
-    text-align: center;
-    padding: 10px; /* Уменьшенная высота */
-    font-size: 0.8rem;
-    position: fixed;
-    width: 100%;
-    top: 0 auto;
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-}
-
-.gradient-header h1 {
-    font-family: 'Arial', sans-serif;
-    font-weight: bold;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-    background: linear-gradient(to bottom, #FFD700, #B8860B); /* Червонное золото */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.github-button {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-    border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.github-button:hover {
-    background-color: #555;
-    transform: scale(1.05);
-}
-
-footer {
-    background-color: rgba(0, 0, 0, 0.3);
+/* Основной стиль для хедера и футера */
+.gradient-header, footer {
+    background-color: rgba(0, 0, 0, 0.3); /* Полупрозрачный чёрный фон */
     color: white;
     text-align: center;
     padding: 10px 0;
     position: fixed;
-    bottom: 0;
     width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Уникальные позиции для хедера и футера */
+.gradient-header {
+    top: 0;
+    left: 0;
+}
+
+footer {
+    bottom: 0;
+    left: 0;
     font-size: 0.9rem;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.9);
+}
+
+/* Общий текстовый стиль */
+.gradient-header h1, footer p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Кнопки в хедере */
+.header-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-right: 20px;
+}
+
+.github-button, .slack-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgba(255, 223, 0, 0.5);
+    color: black;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.github-button:hover, .slack-button:hover {
+    background-color: rgba(255, 223, 0, 0.8);
+    box-shadow: 0 0 20px rgba(255, 223, 0, 1);
+    transform: scale(1.1);
+}
+
+/* Фон для всей страницы */
+body {
+    background: url('./img/i.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+/* Стиль карточек с прозрачным фоном */
+.card {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('./img/card_background.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    border: 1px solid rgba(255, 215, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.card a {
+    color: gold;
+    text-decoration: none;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.card a:hover {
+    color: #FFD700;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 1);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Стиль карточек в виде визиток */
+.card {
+    width: 300px;
+    height: 150px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('./img/card_background.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    border: 2px solid rgba(255, 215, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin: 10px auto;
+}
+
+.card h2 {
+    font-size: 1rem;
+    margin: 5px 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.card a {
+    color: gold;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.card a:hover {
+    color: #FFD700;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 1);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Галерея для размещения карточек */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Отступы для хедера и футера */
+.container {
+    margin-top: 80px; /* Отступ сверху для предотвращения перекрытия хедером */
+    margin-bottom: 60px; /* Отступ снизу для предотвращения перекрытия футером */
+}
+
+/* Ссылки с эффектом восходящего солнца */
+.card a:hover {
+    color: #FFD700;
+    text-shadow: 0 0 15px rgba(255, 223, 0, 1), 0 0 30px rgba(255, 165, 0, 0.9);
+    transition: text-shadow 0.3s ease-in-out;
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 390px) { /* iPhone 14 Pro */
+    .card {
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
+    .gallery {
+        gap: 10px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) { /* Средний планшет */
+    .card {
+        width: 45%;
+        height: auto;
+    }
+    .gallery {
+        gap: 15px;
+    }
+}
+
+@media (min-width: 1200px) { /* Большие экраны */
+    .card {
+        width: 300px;
+        height: 150px;
+    }
+    .gallery {
+        gap: 20px;
+    }
 }

@@ -1,0 +1,148 @@
+
+## Шпаргалка по объектам в JavaScript
+
+### 1. Объект
+- **Определение:** структура данных, состоящая из пар "ключ: значение".
+- **Создание объекта:**
+  const obj = { key: value }; // Литерал объекта
+
+Пример:
+  const car = {
+      brand: "Toyota",
+      model: "Camry",
+      year: 2020
+  };
+
+---
+
+### 2. Свойства объекта
+- **Свойство** — это пара "ключ: значение" в объекте.
+- **Доступ к свойствам:**
+  obj.key;          // Через точку
+  obj["key"];       // Через квадратные скобки
+
+Пример:
+  console.log(car.brand); // "Toyota"
+  console.log(car["model"]); // "Camry"
+
+---
+
+### 3. Методы объекта
+- **Метод** — это функция, которая является свойством объекта.
+- **Синтаксис:**
+  const obj = {
+      methodName() {
+          // Код метода
+      }
+  };
+
+Пример:
+  const car = {
+      startEngine() {
+          console.log("Engine started!");
+      }
+  };
+  car.startEngine(); // Вывод: Engine started!
+
+---
+
+### 4. Ключевое слово this
+- **Определение:** this ссылается на текущий объект, в контексте которого вызвана функция.
+- **Пример:**
+  const person = {
+      name: "Alice",
+      greet() {
+          console.log(`Hi, I'm ${this.name}`);
+      }
+  };
+  person.greet(); // Вывод: Hi, I'm Alice
+
+---
+
+### 5. Конструктор объекта
+- **Конструктор** — это функция или класс, который создаёт объекты.
+- **Функция-конструктор:**
+  function Person(name, age) {
+      this.name = name;
+      this.age = age;
+  }
+  const alice = new Person("Alice", 25);
+
+- **Класс:**
+  class Person {
+      constructor(name, age) {
+          this.name = name;
+          this.age = age;
+      }
+  }
+  const bob = new Person("Bob", 30);
+
+---
+
+### 6. Основные методы работы с объектами
+
+- **Object.keys(obj)**
+  - Возвращает массив ключей объекта.
+    Object.keys(car); // ["brand", "model", "year"]
+
+- **Object.values(obj)**
+  - Возвращает массив значений объекта.
+    Object.values(car); // ["Toyota", "Camry", 2020]
+
+- **Object.entries(obj)**
+  - Возвращает массив пар "ключ: значение".
+    Object.entries(car);
+    // [["brand", "Toyota"], ["model", "Camry"], ["year", 2020]]
+
+- **delete obj.key**
+  - Удаляет свойство из объекта.
+    delete car.year;
+    console.log(car.year); // undefined
+
+---
+
+### 7. Вложенные объекты
+- Объект может содержать другие объекты.
+- Доступ к вложенным свойствам:
+  const user = {
+      name: "Alice",
+      address: {
+          city: "New York",
+          zip: "10001"
+      }
+  };
+  console.log(user.address.city); // "New York"
+
+---
+
+### 8. Цикл for...in
+- Используется для перебора свойств объекта.
+  const car = { brand: "Toyota", model: "Camry", year: 2020 };
+  for (let key in car) {
+      console.log(`${key}: ${car[key]}`);
+  }
+  // Вывод:
+  // brand: Toyota
+  // model: Camry
+  // year: 2020
+
+---
+
+### 9. Копирование объектов
+- **Поверхностное копирование:**
+  const copy = Object.assign({}, originalObj);
+  const copy2 = { ...originalObj };
+
+- **Глубокое копирование (с вложенными объектами):**
+  const deepCopy = JSON.parse(JSON.stringify(originalObj));
+
+---
+
+### 10. Термины для запоминания
+| Термин            | Значение                                                                          |
+|--------------------|----------------------------------------------------------------------------------|
+| Свойство (Property)| Пара "ключ: значение" в объекте.                                                 |
+| Метод (Method)     | Функция, которая является свойством объекта.                                     |
+| this               | Указывает на текущий объект, в контексте которого вызвана функция.               |
+| Конструктор        | Функция или класс, используемый для создания новых объектов.                     |
+| Вложенный объект   | Объект, являющийся значением свойства другого объекта.                           |

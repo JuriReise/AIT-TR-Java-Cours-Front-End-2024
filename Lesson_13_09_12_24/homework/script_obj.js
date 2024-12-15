@@ -25,9 +25,9 @@ const bankAccount = {
     }
 };
 
-
+// Пример использования
 bankAccount.deposit(100);
 bankAccount.withdraw(50);
 bankAccount.checkBalance();
-
+// Объект: Подходит для единичного использования.
 alert("Скрипт в работе");

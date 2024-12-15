@@ -29,10 +29,11 @@ class BankAccount {
         console.log(`Current balance: ${this.balance}`);
     }
 }
-alert("Скрипт в работе");
 
-
+// Пример использования
 const aliceAccount = new BankAccount("123456789", "Alice");
 aliceAccount.deposit(200);
 aliceAccount.withdraw(100);
 aliceAccount.checkBalance();
+// Класс: Удобен для создания множества экземпляров с одинаковым поведением.
+alert("Скрипт в работе");

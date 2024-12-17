@@ -1,0 +1,80 @@
+/* Общие стили */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Контейнер сетки для карточек */
+#grid-products {
+    display: grid; /* Используем CSS grid для равномерного расположения */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Автоматическая сетка */
+    gap: 20px; /* Отступы между карточками */
+    padding: 20px;
+    justify-items: center; /* Выравнивание карточек по центру */
+}
+
+/* Карточка товара */
+.product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    height: 400px; /* Фиксированная высота карточки */
+    width: 100%; /* Карточка адаптируется по сетке */
+    max-width: 250px;
+}
+
+/* Эффект при наведении */
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Заголовок карточки */
+.product-card h4 {
+    margin: 10px 0;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Обертка для изображения */
+.img-wrapper {
+    flex: 0 0 200px; /* Фиксированная высота изображения */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+}
+
+/* Изображение товара */
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Обрезка изображения с сохранением пропорций */
+}
+
+/* Описание товара */
+.product-card p {
+    margin: 5px 10px;
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.4;
+    flex-grow: 1; /* Описание растягивается на доступное пространство */
+}
+
+/* Цена товара */
+.product-card p:last-of-type {
+    font-weight: bold;
+    color: #009688;
+    margin-bottom: 10px;
+}

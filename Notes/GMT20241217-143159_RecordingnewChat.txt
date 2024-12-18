@@ -1,0 +1,38 @@
+00:30:02	Natalia Tikhomirova:	https://developer.mozilla.org/ru/docs/Web/HTML/Element/form
+00:35:36	Mikhail Smokotnin:	By registering on the site, you agree to our Rules and Privacy Policy and agree to receive newsletters.
+00:36:58	Juri Reise:	сопроводительная ремарка))
+00:41:15	Mikhail Smokotnin:	<div class="popup">
+        <div class="popup_body">
+            <div class="popup_content">
+                <span class="cross_icon">X</span>
+                <form  class="registration_form">
+                    <h3>Registration</h3>
+                    <input type="email" name="email" placeholder="Email" >
+                    <input type="password" name="password" placeholder="Password" >
+                    <p>By registering on the site, you agree to our Rules and Privacy Policy and agree to receive newsletters.</p>
+                    <button>Registration</button>
+                    <div>Login</div>
+                </form>
+            </div>
+        </div>
+    </div>
+00:50:52	Mikhail Smokotnin:	#FFE44D
+01:24:42	Mikhail Smokotnin:	background-color: #FFE44D;
+    gap: 20px;
+    width: 120px;
+    transform: translateX(100%);
+    transition: 0.5s;
+01:26:58	Mikhail Smokotnin:	ul.nav_active {
+    transform: translateX(0);
+  }
+
+  ul li {
+    border-bottom: 1px solid black;
+    padding: 15px;
+  }
+01:28:59	Mikhail Smokotnin:	// При клике на burger_icon класс nav_active у ul появляется, если его нет, и удаляется, если он есть
+
+const burger_icon = document.querySelector('.burger_icon');
+const nav_menu = document.querySelector('.nav_menu');
+
+burger_icon.addEventListener('click', () => nav_menu.classList.toggle('nav_active'));

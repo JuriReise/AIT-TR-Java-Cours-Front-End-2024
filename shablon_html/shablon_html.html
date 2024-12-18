@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Динамическая смена фона</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    #colorInput {
+      padding: 5px;
+      font-size: 16px;
+    }
+    #applyButton {
+      padding: 5px 10px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Динамическая смена фона</h1>
+  <p>Введите цвет (например, <code>lightblue</code>, <code>#282c34</code>, или <code>rgb(40, 44, 52)</code>) и нажмите "Применить".</p>
+
+  <input type="text" id="colorInput" placeholder="Введите цвет..." />
+  <button id="applyButton">Применить</button>
+
+  <script>
+    // Находим элементы на странице
+    const colorInput = document.getElementById('colorInput');
+    const applyButton = document.getElementById('applyButton');
+
+    // Обработчик нажатия на кнопку
+    applyButton.addEventListener('click', () => {
+      const color = colorInput.value; // Получаем значение из поля ввода
+      document.body.style.backgroundColor = color; // Меняем цвет фона
+    });
+
+    // Удобство: изменяем фон при нажатии Enter
+    colorInput.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter') {
+        const color = colorInput.value;
+        document.body.style.backgroundColor = color;
+      }
+    });
+  </script>
+</body>
+</html>

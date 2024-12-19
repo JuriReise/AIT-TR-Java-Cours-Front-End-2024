@@ -1,47 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forecast</title>
-    <style>
-        .loader {
-            width: 48px;
-            height: 48px;
-            border: 5px solid #FFF;
-            border-bottom-color: #FF3D00;
-            border-radius: 50%;
-            display: none; /* Скрыт по умолчанию */
-            box-sizing: border-box;
-            animation: rotation 0.7s linear infinite;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
+    <title>Геоданные и Погода</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-        @keyframes rotation {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-    </style>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☀️</text></svg>">
 </head>
 <body>
-    <h1>Мои геоданные🧭</h1>
-    <div id="geo-data">Загрузка данных...</div>
-    
-    <h1>Прогноз погоды☔</h1>  
-    <div id="weather-data">Загрузка данных о погоде...</div>
+    <div class="background">
+        <!-- Лоадер -->
+        <div class="loader" id="loader"></div>
 
-    <div class="loader"></div>
+        <!-- Карточка с геоданными -->
+        <div class="card" id="geo-card">
+            <div class="card-image">
+                <img src="placeholder-city.jpg" alt="Фотография города" id="city-photo">
+            </div>
+            <div class="card-content" id="geo-data">
+                Загрузка геоданных...
+            </div>
+        </div>
 
+        <!-- Карточка с погодой -->
+        <div class="card" id="weather-card">
+            <div class="card-image">
+                <img src="placeholder-weather.jpg" alt="Фотография сезона" id="season-photo">
+            </div>
+            <div class="card-content" id="weather-data">
+                Загрузка данных о погоде...
+            </div>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="scrypt.js"></script>
 </body>

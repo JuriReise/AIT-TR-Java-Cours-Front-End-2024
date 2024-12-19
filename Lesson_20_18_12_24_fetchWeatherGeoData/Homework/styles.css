@@ -1,0 +1,81 @@
+/* Общие стили */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column; 
+    font-family: 'Roboto', Arial, sans-serif;
+
+}
+
+/* Фон */
+.background {
+    width: 100%;
+    height: 100%;
+    background: url('../IMG/BR.jpg') no-repeat center center/cover;
+    top: 0; 
+    left: 0; 
+    position: fixed;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    gap: 20px; 
+}
+
+/* стиль карточек */
+.card {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 90%; 
+    max-width: 500px; 
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+.card-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+
+.card-content {
+    padding: 15px;
+    font-size: 16px;
+    color: #030303;
+}
+
+/* Лоадер */
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #FFF;
+    border-bottom-color: #FF3D00;
+    border-radius: 50%;
+    display: none; /* Скрыт по умолчанию */
+    animation: rotation 0.7s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

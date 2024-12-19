@@ -10,7 +10,7 @@ function manageLoader(show) {
     loader.style.display = show ? 'inline-block' : 'none';
 }
 
-// Общая функция для выполнения запросов
+// функция для выполнения запросов
 async function fetchData(url) {
     try {
         const response = await axios.get(url);
@@ -75,7 +75,7 @@ async function fetchCityPhotoPexels(city) {
     }
 }
 
-// Функция для получения фотографии города
+
 async function fetchCityPhoto(city) {
     try {
         let photoUrl = await fetchCityPhotoPixabay(city);
@@ -90,7 +90,7 @@ async function fetchCityPhoto(city) {
     }
 }
 
-// Функция для получения геоданных с двумя вариантами
+
 async function fetchGeoData() {
     const geoJsUrl = 'https://get.geojs.io/v1/ip/geo.json';
     const ipInfoUrl = 'https://ipinfo.io/json?token=468b0de863ad1e'; // Ваш токен
@@ -129,7 +129,7 @@ async function fetchGeoData() {
     }
 }
 
-// Получение данных о погоде
+
 async function fetchWeatherData(latitude = 35.6895, longitude = 139.6917) {
     const weatherUrl = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`;
     try {
@@ -150,7 +150,7 @@ async function fetchWeatherData(latitude = 35.6895, longitude = 139.6917) {
     }
 }
 
-// Фон по сезонам
+
 function updateSeasonBackground() {
     const month = new Date().getMonth();
     const seasonPhoto = document.getElementById('season-photo');
@@ -159,7 +159,7 @@ function updateSeasonBackground() {
     seasonPhoto.src = `../IMG/${seasons[seasonIndex]}`;
 }
 
-// Инициализация
+
 document.addEventListener('DOMContentLoaded', () => {
     fetchGeoData();
     updateSeasonBackground();

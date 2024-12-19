@@ -8,7 +8,7 @@ body, html {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    flex-direction: column; 
+    flex-direction: column; /* Важное изменение для вертикального расположения */
     font-family: 'Roboto', Arial, sans-serif;
 
 }
@@ -18,38 +18,38 @@ body, html {
     width: 100%;
     height: 100%;
     background: url('../IMG/BR.jpg') no-repeat center center/cover;
-    top: 0; 
-    left: 0; 
+    top: 0; /* Начало элемента */
+    left: 0; /* Начало элемента */
     position: fixed;
     z-index: -1;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; 
-    gap: 20px; 
+    flex-direction: column; /* Карточки размещаются вертикально */
+    gap: 20px; /* Расстояние между карточками */
 }
 
-/* стиль карточек */
+/* Общий стиль карточек */
 .card {
     background: rgba(255, 255, 255, 0.5);
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    width: 90%; 
-    max-width: 500px; 
+    width: 90%; /* Карточки занимают 90% ширины контейнера */
+    max-width: 500px; /* Максимальная ширина карточки */
     display: flex;
     flex-direction: column;
     text-align: center;
 }
 
-
+/* Изображения внутри карточек */
 .card-image img {
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
 
-
+/* Контент карточки */
 .card-content {
     padding: 15px;
     font-size: 16px;

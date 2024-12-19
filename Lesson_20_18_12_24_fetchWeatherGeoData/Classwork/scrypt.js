@@ -4,13 +4,13 @@ const PIXABAY_API_KEY = '47725528-48b62ab698c0d7142d9367fa8';
 // Pexels API ключ
 const PEXELS_API_KEY = 'EYIALjcjssVIlaWcErEDVlszKju7PI7GN8xalyGnzUN9pPLOwWbTDVmZ';
 
-// Управление лоадером
+// лоадер
 function manageLoader(show) {
     const loader = document.getElementById('loader');
     loader.style.display = show ? 'inline-block' : 'none';
 }
 
-// функция для выполнения запросов
+// общие запросы
 async function fetchData(url) {
     try {
         const response = await axios.get(url);

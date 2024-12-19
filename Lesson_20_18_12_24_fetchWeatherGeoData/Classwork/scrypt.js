@@ -93,7 +93,7 @@ async function fetchCityPhoto(city) {
 
 async function fetchGeoData() {
     const geoJsUrl = 'https://get.geojs.io/v1/ip/geo.json';
-    const ipInfoUrl = 'https://ipinfo.io/json?token=468b0de863ad1e'; // Ваш токен
+    const ipInfoUrl = 'https://ipinfo.io/json?token=468b0de863ad1e'; 
     manageLoader(true);
 
     try {
